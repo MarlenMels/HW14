@@ -8,16 +8,11 @@ public class Main {
     }
 
     public static double avg(int num) {
-        double ans;
-        int sum = 0;
-        int count = 0;
-        while(num > 0) {
-            sum += num % 10;
-            count ++;
-            num /= 10;
-
+        String numStr = String.valueOf(num);
+        double sum = 0;
+        for(int i = 0; i < numStr.length(); i++) {
+            sum += Integer.parseInt(String.valueOf(numStr.charAt(i)));
         }
-        ans = (double)sum / count;
-        return ans; //todo заменить 0 на корректный результат.
+        return sum / numStr.length(); //todo заменить 0 на корректный результат.
     }
 }
