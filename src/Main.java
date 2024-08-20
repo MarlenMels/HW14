@@ -8,7 +8,16 @@ public class Main {
     }
 
     public static double avg(int num) {
-        //todo Дописать логику работы метода сюда. Метод main не трогаем!!!
-        return 0; //todo заменить 0 на корректный результат.
+        double ans;
+        int sum = 0;
+        int count = 0;
+        while(num > 0) {
+            sum += num % 10;
+            count ++;
+            num /= 10;
+
+        }
+        ans = (double)sum / count;
+        return ans; //todo заменить 0 на корректный результат.
     }
 }
